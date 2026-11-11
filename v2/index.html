@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>さくら薬局｜○○駅 徒歩3分の調剤薬局（デザイン案 v2）</title>
+<meta name="description" content="さくら薬局は○○駅から徒歩3分の調剤薬局です。全国の処方箋を受け付け、LINEでの事前送信、ご自宅への訪問、オンライン服薬指導に対応しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 共通で使い回すSVGパーツ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="mark" viewBox="0 0 32 32">
+<g fill="#E9879B">
+<ellipse cx="16" cy="8.4" rx="4.7" ry="7"/>
+<ellipse cx="16" cy="8.4" rx="4.7" ry="7" transform="rotate(72 16 16)"/>
+<ellipse cx="16" cy="8.4" rx="4.7" ry="7" transform="rotate(144 16 16)"/>
+<ellipse cx="16" cy="8.4" rx="4.7" ry="7" transform="rotate(216 16 16)"/>
+<ellipse cx="16" cy="8.4" rx="4.7" ry="7" transform="rotate(288 16 16)"/>
+</g>
+<circle cx="16" cy="16" r="5.6" fill="#fff"/>
+<path d="M16 12.6v6.8M12.6 16h6.8" stroke="#1F6B4F" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="petal" viewBox="0 0 20 24">
+<path d="M10 23C3 17 1 11 3.5 5.5 5 2.4 8 1.6 10 4.2 12 1.6 15 2.4 16.5 5.5 19 11 17 17 10 23z"/>
+</symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.5 4-2 1.6a12 12 0 0 0 6.2 6.2l1.6-2 4 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M7 3.5h7.5L19 8v12.5H7z M14.5 3.5V8H19 M10 13h6M10 16.5h4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s7-6.4 7-11.5a7 7 0 0 0-14 0c0 5.100 7 11.500 7 11.500z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3.500 11.500 12 4l8.500 7.500M6 9.800V20h12V9.800M10 20v-5.500h4V20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="12.500" height="12" rx="2.500" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M15.500 10.500 21 7.500v9l-5.500-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+<symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.800" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M4.500 20.500c.600-4.200 3.500-6.500 7.500-6.500s6.900 2.300 7.500 6.500" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+<symbol id="i-packs" viewBox="0 0 24 24"><rect x="3" y="6.500" width="18" height="11" rx="1.500" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M9 6.500v11M15 6.500v11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-dasharray="1.500 2"/><circle cx="6" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="18" cy="12" r="1" fill="currentColor"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S4 15 4 9.300A4.300 4.300 0 0 1 12 7a4.300 4.300 0 0 1 8 2.300C20 15 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M7.500 12h2.300l1.400-2.500 1.800 4.500 1.200-2h2.300" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-bottle" viewBox="0 0 24 24"><path d="M9 3.500h6v3H9zM8 6.500h8l1.500 3V20a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V9.500z M6.500 12.500h11v5h-11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.500h16v11h-8.500L7 20v-3.500H4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8 9.500h8M8 12.500h5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+</defs>
+</svg>
+
+<p class="demo-strip">デザイン案 v2 ／ 薬局名・住所・電話番号・スタッフはすべて仮のものです　<a href="../index.html">デザイン一覧へ</a></p>
+
+<header class="site-header" id="top">
+<div class="wrap header-inner">
+<a class="logo" href="#top" aria-label="さくら薬局 トップへ">
+<svg width="38" height="38" aria-hidden="true"><use href="#mark"/></svg>
+<span class="logo-text"><small>○○駅 徒歩3分の調剤薬局</small>さくら薬局</span>
+</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="gnav">
+<span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">メニュー</span>
+</button>
+<nav class="gnav" id="gnav" aria-label="メインメニュー">
+<a href="#flow">処方箋の送り方</a>
+<a href="#service">できること</a>
+<a href="#staff">薬剤師紹介</a>
+<a href="#faq">よくある質問</a>
+<a href="#store">店舗案内</a>
+</nav>
+<div class="header-cta">
+<a class="tel" href="tel:0300000000">
+<svg width="20" height="20" aria-hidden="true"><use href="#i-tel"/></svg>
+<span><b>03-0000-0000</b><small>平日 9:00–18:30／土 9:00–13:00</small></span>
+</a>
+<a class="btn btn-primary" href="#flow"><svg width="18" height="18" aria-hidden="true"><use href="#i-send"/></svg>処方箋を送る</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ヒーロー -->
+<section class="hero">
+<div class="wrap hero-inner">
+<div class="hero-copy">
+<p class="hero-tag"><svg width="14" height="17" aria-hidden="true"><use href="#petal"/></svg>全国どこの病院・クリニックの処方箋でも受け付けます</p>
+<h1>くすりのこと、<br><span class="marker">気がねなく聞ける</span><br>薬局です。</h1>
+<p class="hero-lead">飲み合わせの確認から、残ったお薬の整理、ご自宅への訪問まで。さくら通り商店街で、ご家族みなさまのお薬をまとめてお預かりします。</p>
+<div class="hero-actions">
+<a class="btn btn-primary btn-lg" href="#flow"><svg width="20" height="20" aria-hidden="true"><use href="#i-send"/></svg>LINEで処方箋を送る</a>
+<a class="btn btn-ghost btn-lg" href="#store"><svg width="20" height="20" aria-hidden="true"><use href="#i-pin"/></svg>場所と受付時間</a>
+</div>
+<ul class="hero-points">
+<li>マイナ保険証・電子処方箋 対応</li>
+<li>ご自宅への訪問</li>
+<li>駐車場 3台</li>
+</ul>
+</div>
+
+<div class="hero-visual">
+<div class="hero-panel">
+<svg class="storefront" viewBox="0 0 560 430" role="img" aria-label="さくら薬局の外観イラスト">
+<!-- 空と地面 -->
+<circle cx="468" cy="70" r="30" fill="#fff" opacity=".7"/>
+<ellipse cx="280" cy="398" rx="262" ry="24" fill="#CFE2D6"/>
+<!-- 桜の木 -->
+<path d="M82 392c2-50 0-96-6-140l18-2c2 46 6 94 10 142z" fill="#8A6A58"/>
+<path d="M88 300c-14-16-28-22-44-24M92 286c14-18 26-26 44-30" stroke="#8A6A58" stroke-width="6" stroke-linecap="round" fill="none"/>
+<g fill="#F6B9C5"><circle cx="52" cy="232" r="38"/><circle cx="118" cy="204" r="44"/><circle cx="84" cy="168" r="40"/><circle cx="138" cy="252" r="30"/><circle cx="30" cy="270" r="22"/></g>
+<g fill="#FBD5DC"><circle cx="70" cy="196" r="26"/><circle cx="122" cy="178" r="22"/><circle cx="104" cy="240" r="24"/><circle cx="44" cy="244" r="16"/></g>
+<g fill="#E9879B"><circle cx="96" cy="160" r="5"/><circle cx="60" cy="220" r="5"/><circle cx="132" cy="216" r="5"/><circle cx="112" cy="256" r="4"/><circle cx="36" cy="262" r="4"/><circle cx="84" cy="196" r="4"/></g>
+<!-- 建物 -->
+<rect x="170" y="92" width="336" height="300" rx="6" fill="#FFFFFF"/>
+<rect x="160" y="80" width="356" height="22" rx="5" fill="#0F4534"/>
+<!-- 看板 -->
+<rect x="194" y="118" width="288" height="60" rx="8" fill="#1F6B4F"/>
+<g transform="translate(210 130) scale(1.12)"><use href="#mark" width="32" height="32"/></g>
+<text x="352" y="158" text-anchor="middle" font-family="'Zen Maru Gothic',sans-serif" font-weight="700" font-size="29" fill="#fff" letter-spacing="3">さくら薬局</text>
+<!-- 日よけ -->
+<rect x="182" y="196" width="312" height="22" fill="#E9879B"/>
+<g>
+<circle cx="195" cy="218" r="13" fill="#E9879B"/><circle cx="221" cy="218" r="13" fill="#FCE9ED"/><circle cx="247" cy="218" r="13" fill="#E9879B"/><circle cx="273" cy="218" r="13" fill="#FCE9ED"/><circle cx="299" cy="218" r="13" fill="#E9879B"/><circle cx="325" cy="218" r="13" fill="#FCE9ED"/><circle cx="351" cy="218" r="13" fill="#E9879B"/><circle cx="377" cy="218" r="13" fill="#FCE9ED"/><circle cx="403" cy="218" r="13" fill="#E9879B"/><circle cx="429" cy="218" r="13" fill="#FCE9ED"/><circle cx="455" cy="218" r="13" fill="#E9879B"/><circle cx="481" cy="218" r="13" fill="#FCE9ED"/>
+</g>
+<!-- 窓と棚 -->
+<rect x="194" y="250" width="150" height="108" rx="5" fill="#DDEDF0" stroke="#0F4534" stroke-width="4"/>
+<path d="M196 286h146M196 322h146" stroke="#0F4534" stroke-width="3"/>
+<g>
+<rect x="206" y="264" width="12" height="20" rx="2" fill="#1F6B4F"/><rect x="224" y="268" width="16" height="16" rx="2" fill="#fff"/><rect x="246" y="262" width="10" height="22" rx="2" fill="#E9879B"/><rect x="262" y="268" width="18" height="16" rx="2" fill="#fff"/><rect x="288" y="264" width="12" height="20" rx="2" fill="#F2C66D"/><rect x="308" y="268" width="22" height="16" rx="2" fill="#1F6B4F"/>
+<rect x="206" y="302" width="20" height="18" rx="2" fill="#fff"/><rect x="232" y="298" width="12" height="22" rx="2" fill="#F2C66D"/><rect x="250" y="304" width="24" height="16" rx="2" fill="#E9879B"/><rect x="282" y="300" width="12" height="20" rx="2" fill="#1F6B4F"/><rect x="300" y="304" width="28" height="16" rx="2" fill="#fff"/>
+</g>
+<rect x="212" y="330" width="114" height="22" rx="4" fill="#fff"/>
+<text x="269" y="346" text-anchor="middle" font-family="'Zen Kaku Gothic New',sans-serif" font-weight="700" font-size="12.5" fill="#0F4534" letter-spacing="1">処方せん受付</text>
+<!-- 自動ドア -->
+<rect x="372" y="244" width="108" height="148" rx="4" fill="#DDEDF0" stroke="#0F4534" stroke-width="4"/>
+<path d="M426 246v144" stroke="#0F4534" stroke-width="3"/>
+<rect x="414" y="310" width="6" height="26" rx="3" fill="#0F4534"/><rect x="432" y="310" width="6" height="26" rx="3" fill="#0F4534"/>
+<path d="M384 262l22-10M384 280l14-6" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+<!-- 突き出し看板 -->
+<rect x="506" y="140" width="10" height="6" fill="#0F4534"/>
+<rect x="514" y="118" width="42" height="50" rx="8" fill="#fff" stroke="#1F6B4F" stroke-width="3"/>
+<path d="M535 131v24M523 143h24" stroke="#1F6B4F" stroke-width="7" stroke-linecap="round"/>
+<!-- 植木 -->
+<rect x="346" y="368" width="20" height="24" rx="3" fill="#C9A98C"/>
+<circle cx="356" cy="356" r="15" fill="#3E8C6B"/><circle cx="348" cy="364" r="9" fill="#5BA584"/>
+<rect x="486" y="368" width="20" height="24" rx="3" fill="#C9A98C"/>
+<circle cx="496" cy="356" r="15" fill="#3E8C6B"/><circle cx="504" cy="364" r="9" fill="#5BA584"/>
+</svg>
+<span class="float-petal p1" aria-hidden="true"><svg width="18" height="22"><use href="#petal"/></svg></span>
+<span class="float-petal p2" aria-hidden="true"><svg width="13" height="16"><use href="#petal"/></svg></span>
+<span class="float-petal p3" aria-hidden="true"><svg width="15" height="18"><use href="#petal"/></svg></span>
+</div>
+
+<!-- 薬袋（やくたい）をかたどった本日の受付案内 -->
+<aside class="yakutai" aria-label="本日の受付案内">
+<p class="yk-head"><span class="yk-kind">本日の受付</span><span class="yk-date" data-today>受付時間</span></p>
+<p class="yk-name"><span>ご来局のみなさま</span>様</p>
+<dl class="yk-rows">
+<div><dt>受付時間</dt><dd data-today-hours>平日 9:00 – 18:30<br>土曜 9:00 – 13:00</dd></div>
+<div data-status-row hidden><dt>ただいま</dt><dd><span class="status" data-status></span></dd></div>
+</dl>
+<ul class="yk-checks" aria-label="本日できること">
+<li>処方箋</li><li>お薬相談</li><li>市販薬</li><li>血圧測定</li>
+</ul>
+<p class="yk-foot">さくら薬局　☎ 03-0000-0000</p>
+</aside>
+</div>
+</div>
+</section>
+
+<!-- 目的別の入口 -->
+<section class="routes" aria-label="ご用件から探す">
+<div class="wrap routes-grid">
+<a class="route" href="#flow">
+<span class="route-icon"><svg width="28" height="28" aria-hidden="true"><use href="#i-send"/></svg></span>
+<span class="route-body"><b>処方箋をお持ちの方</b><span>先に送っておくと、待たずに受け取れます</span></span>
+<svg class="route-arrow" width="22" height="22" aria-hidden="true"><use href="#i-arrow"/></svg>
+</a>
+<a class="route" href="#service">
+<span class="route-icon"><svg width="28" height="28" aria-hidden="true"><use href="#i-chat"/></svg></span>
+<span class="route-body"><b>お薬の相談をしたい方</b><span>処方箋がなくても、相談だけで大丈夫です</span></span>
+<svg class="route-arrow" width="22" height="22" aria-hidden="true"><use href="#i-arrow"/></svg>
+</a>
+<a class="route" href="#homecare">
+<span class="route-icon"><svg width="28" height="28" aria-hidden="true"><use href="#i-home"/></svg></span>
+<span class="route-body"><b>通院が難しい方・ご家族</b><span>薬剤師がご自宅や施設へうかがいます</span></span>
+<svg class="route-arrow" width="22" height="22" aria-hidden="true"><use href="#i-arrow"/></svg>
+</a>
+</div>
+</section>
+
+<!-- 処方箋の事前送信 -->
+<section class="section flow" id="flow">
+<div class="wrap">
+<div class="section-head">
+<h2><svg width="18" height="22" aria-hidden="true"><use href="#petal"/></svg>処方箋は、先に送ると待ちません</h2>
+<p>病院を出たらスマートフォンで撮って送るだけ。お薬の用意ができたらお知らせします。</p>
+</div>
+<ol class="steps">
+<li><span class="step-no">1</span><h3>処方箋を撮影</h3><p>全体が写るように、明るい場所で撮ってください。</p></li>
+<li><span class="step-no">2</span><h3>LINEで送信</h3><p>さくら薬局を友だち追加して、写真を送ります。</p></li>
+<li><span class="step-no">3</span><h3>準備完了の通知</h3><p>ご用意ができたらLINEでお知らせします。</p></li>
+<li><span class="step-no">4</span><h3>薬局で受け取り</h3><p>処方箋の原本とお薬手帳をお持ちください。</p></li>
+</ol>
+<div class="flow-foot">
+<div class="flow-cta">
+<a class="btn btn-primary btn-lg" href="#"><svg width="20" height="20" aria-hidden="true"><use href="#i-send"/></svg>LINEで友だち追加する</a>
+<p>FAXでも受け付けています　<b class="num">FAX 03-0000-0001</b></p>
+</div>
+<p class="notice"><b>処方箋の有効期限は、発行日を含めて4日間です。</b>土日・祝日も日数に含まれます。期限内に原本をお持ちください。</p>
+</div>
+</div>
+</section>
+
+<!-- できること -->
+<section class="section service" id="service">
+<div class="wrap">
+<div class="section-head">
+<h2><svg width="18" height="22" aria-hidden="true"><use href="#petal"/></svg>さくら薬局でできること</h2>
+<p>お薬をお渡しするだけでなく、飲み続けやすくするところまでお手伝いします。</p>
+</div>
+<div class="service-grid">
+<article class="homecare" id="homecare">
+<svg class="homecare-art" viewBox="0 0 220 150" aria-hidden="true">
+<ellipse cx="110" cy="138" rx="100" ry="10" fill="#0B3A2B"/>
+<path d="M32 74 92 28l60 46v60H32z" fill="#F7FAF8"/>
+<path d="M22 78 92 24l70 54" fill="none" stroke="#E9879B" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="78" y="88" width="28" height="46" rx="3" fill="#1F6B4F"/>
+<circle cx="100" cy="112" r="2.500" fill="#fff"/>
+<rect x="116" y="84" width="24" height="22" rx="3" fill="#CFE2D6"/>
+<rect x="46" y="84" width="22" height="22" rx="3" fill="#CFE2D6"/>
+<rect x="164" y="98" width="42" height="34" rx="5" fill="#fff"/>
+<rect x="176" y="90" width="18" height="10" rx="3" fill="none" stroke="#fff" stroke-width="4"/>
+<path d="M185 107v16M177 115h16" stroke="#E9879B" stroke-width="5" stroke-linecap="round"/>
+</svg>
+<h3>ご自宅・施設への訪問</h3>
+<p>通院や来局が難しい方のもとへ、薬剤師がお薬をお届けします。飲み忘れや残薬を確認し、主治医・ケアマネジャーへ報告します。</p>
+<ul>
+<li>お薬カレンダーへのセット</li>
+<li>残ったお薬の整理と調整</li>
+<li>介護保険・医療保険が使えます</li>
+</ul>
+<p class="homecare-note">訪問には医師の指示が必要です。まずはお電話か、担当のケアマネジャーさんを通じてご相談ください。</p>
+<a class="btn btn-light" href="tel:0300000000"><svg width="18" height="18" aria-hidden="true"><use href="#i-tel"/></svg>訪問について相談する</a>
+</article>
+
+<ul class="service-list">
+<li>
+<span class="service-icon"><svg width="26" height="26" aria-hidden="true"><use href="#i-send"/></svg></span>
+<div><h3>処方箋の調剤</h3><p>全国の医療機関の処方箋を受け付けます。在庫のないお薬も、当日から翌営業日にご用意します。</p></div>
+</li>
+<li>
+<span class="service-icon"><svg width="26" height="26" aria-hidden="true"><use href="#i-person"/></svg></span>
+<div><h3>かかりつけ薬剤師</h3><p>いつも同じ薬剤師が、複数の病院のお薬や市販薬・サプリメントをまとめて確認します。</p></div>
+</li>
+<li>
+<span class="service-icon"><svg width="26" height="26" aria-hidden="true"><use href="#i-packs"/></svg></span>
+<div><h3>一包化（いっぽうか）</h3><p>朝・昼・夕など飲むタイミングごとに1袋にまとめます。飲み間違いが気になる方に。</p></div>
+</li>
+<li>
+<span class="service-icon"><svg width="26" height="26" aria-hidden="true"><use href="#i-video"/></svg></span>
+<div><h3>オンライン服薬指導</h3><p>ビデオ通話でご説明し、お薬はご自宅へ配送します。オンライン診療のあとにも使えます。</p></div>
+</li>
+<li>
+<span class="service-icon"><svg width="26" height="26" aria-hidden="true"><use href="#i-heart"/></svg></span>
+<div><h3>健康相談・血圧測定</h3><p>処方箋がなくても立ち寄れます。血圧計はいつでも無料でお使いいただけます。</p></div>
+</li>
+<li>
+<span class="service-icon"><svg width="26" height="26" aria-hidden="true"><use href="#i-bottle"/></svg></span>
+<div><h3>市販薬・衛生用品</h3><p>かぜ薬や湿布、介護用品など。今飲んでいるお薬との飲み合わせを確認してお選びします。</p></div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- 薬剤師紹介 -->
+<section class="section staff" id="staff">
+<div class="wrap">
+<div class="section-head">
+<h2><svg width="18" height="22" aria-hidden="true"><use href="#petal"/></svg>窓口でお待ちしています</h2>
+<p>顔なじみの薬剤師がいると、ちょっとしたことも聞きやすくなります。</p>
+</div>
+<ul class="staff-grid">
+<li class="staff-card">
+<svg class="avatar" viewBox="0 0 120 120" role="img" aria-label="山田 太郎の似顔絵">
+<circle cx="60" cy="60" r="60" fill="#E6F1EA"/>
+<path d="M18 120c2-24 18-36 42-36s40 12 42 36z" fill="#fff"/>
+<path d="M48 85l12 16 12-16" fill="none" stroke="#1F6B4F" stroke-width="5" stroke-linejoin="round"/>
+<rect x="53" y="68" width="14" height="18" fill="#F3CDB6"/>
+<circle cx="60" cy="52" r="23" fill="#F8DBC8"/>
+<path d="M37 50c-2-18 8-28 23-28s26 9 23 28c-4-9-10-13-20-14-10 0-20 4-26 14z" fill="#3B302B"/>
+<circle cx="52" cy="54" r="2.300" fill="#3B302B"/><circle cx="68" cy="54" r="2.300" fill="#3B302B"/>
+<path d="M53 62c4 4 10 4 14 0" fill="none" stroke="#B5705A" stroke-width="2.200" stroke-linecap="round"/>
+</svg>
+<div class="staff-body">
+<p class="staff-role">管理薬剤師</p>
+<h3>山田 太郎</h3>
+<p class="staff-comment">「病院では聞きそびれたことを、ここで聞いてください。お薬手帳を見ながら一緒に整理します。」</p>
+<p class="staff-tags"><span>在宅訪問</span><span>糖尿病のお薬</span></p>
+</div>
+</li>
+<li class="staff-card">
+<svg class="avatar" viewBox="0 0 120 120" role="img" aria-label="佐藤 花子の似顔絵">
+<circle cx="60" cy="60" r="60" fill="#FCE9ED"/>
+<path d="M34 52c-2-22 10-32 26-32s28 10 26 32c2 12 0 22-4 30H38c-4-8-6-18-4-30z" fill="#4A372F"/>
+<path d="M18 120c2-24 18-36 42-36s40 12 42 36z" fill="#fff"/>
+<path d="M48 85l12 16 12-16" fill="none" stroke="#E9879B" stroke-width="5" stroke-linejoin="round"/>
+<rect x="53" y="68" width="14" height="18" fill="#F3CDB6"/>
+<circle cx="60" cy="52" r="22" fill="#F8DBC8"/>
+<path d="M38 50c0-14 9-22 22-22s22 8 22 22c-8-2-14-6-18-13-5 7-14 11-26 13z" fill="#4A372F"/>
+<circle cx="52" cy="55" r="2.300" fill="#3B302B"/><circle cx="68" cy="55" r="2.300" fill="#3B302B"/>
+<circle cx="46" cy="61" r="3.500" fill="#F4B6B0" opacity=".7"/><circle cx="74" cy="61" r="3.500" fill="#F4B6B0" opacity=".7"/>
+<path d="M54 63c3 3.500 9 3.500 12 0" fill="none" stroke="#B5705A" stroke-width="2.200" stroke-linecap="round"/>
+</svg>
+<div class="staff-body">
+<p class="staff-role">薬剤師</p>
+<h3>佐藤 花子</h3>
+<p class="staff-comment">「お子さんが粉薬を嫌がるとき、飲ませ方のコツをお伝えしています。授乳中のお薬もご相談ください。」</p>
+<p class="staff-tags"><span>小児のお薬</span><span>妊娠・授乳</span></p>
+</div>
+</li>
+<li class="staff-card">
+<svg class="avatar" viewBox="0 0 120 120" role="img" aria-label="鈴木 一郎の似顔絵">
+<circle cx="60" cy="60" r="60" fill="#FBF0D6"/>
+<path d="M18 120c2-24 18-36 42-36s40 12 42 36z" fill="#fff"/>
+<path d="M48 85l12 16 12-16" fill="none" stroke="#1F6B4F" stroke-width="5" stroke-linejoin="round"/>
+<rect x="53" y="68" width="14" height="18" fill="#F3CDB6"/>
+<circle cx="60" cy="52" r="23" fill="#F8DBC8"/>
+<path d="M37 48c0-16 10-25 23-25s23 9 23 25c-3-6-7-9-11-10-8 3-22 3-28 1-3 2-5 5-7 9z" fill="#5A5552"/>
+<g fill="none" stroke="#3B302B" stroke-width="2.200"><circle cx="51" cy="55" r="6.500"/><circle cx="69" cy="55" r="6.500"/><path d="M57.500 55h5"/></g>
+<circle cx="51" cy="55" r="1.800" fill="#3B302B"/><circle cx="69" cy="55" r="1.800" fill="#3B302B"/>
+<path d="M54 65c3 3 9 3 12 0" fill="none" stroke="#B5705A" stroke-width="2.200" stroke-linecap="round"/>
+</svg>
+<div class="staff-body">
+<p class="staff-role">登録販売者</p>
+<h3>鈴木 一郎</h3>
+<p class="staff-comment">「市販薬は種類が多くて迷いますよね。症状と今のお薬をうかがって、合うものを一緒に探します。」</p>
+<p class="staff-tags"><span>市販薬選び</span><span>介護用品</span></p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+
+<!-- お知らせ・よくある質問 -->
+<section class="section info" id="faq">
+<div class="wrap info-grid">
+<div class="faq">
+<h2><svg width="18" height="22" aria-hidden="true"><use href="#petal"/></svg>よくあるご質問</h2>
+<details open>
+<summary>家から遠い病院の処方箋でも受け付けてもらえますか？</summary>
+<p>はい。全国どの医療機関の処方箋でも受け付けます。お薬の在庫がない場合は取り寄せになるため、事前にLINEかFAXで送っていただくと確実です。</p>
+</details>
+<details>
+<summary>お薬手帳を忘れても受け取れますか？</summary>
+<p>受け取れます。その日の内容はシールでお渡ししますので、ご自宅で手帳に貼ってください。スマートフォンのお薬手帳アプリにも対応しています。</p>
+</details>
+<details>
+<summary>ジェネリック医薬品に変えられますか？</summary>
+<p>多くのお薬で変更できます。お薬代の差額や、形・味の違いをご説明したうえで選んでいただけます。窓口でお気軽にお申し出ください。</p>
+</details>
+<details>
+<summary>マイナ保険証や電子処方箋は使えますか？</summary>
+<p>どちらも使えます。電子処方箋の場合は、病院で受け取った「処方内容（控え）」か引換番号をお持ちください。</p>
+</details>
+<details>
+<summary>支払いにカードや電子マネーは使えますか？</summary>
+<p>クレジットカード、交通系ICカード、主要なQRコード決済がご利用いただけます。</p>
+</details>
+</div>
+<div class="news">
+<h2><svg width="18" height="22" aria-hidden="true"><use href="#petal"/></svg>お知らせ</h2>
+<ul>
+<li><a href="#"><time datetime="2026-11-01">2026.11.01</time><span class="cat">営業日</span><span class="ttl">年末年始の受付日のご案内（12/30〜1/3 休業）</span></a></li>
+<li><a href="#"><time datetime="2026-10-15">2026.10.15</time><span class="cat">お薬</span><span class="ttl">一部のせき止め・たん切りが入りにくくなっています</span></a></li>
+<li><a href="#"><time datetime="2026-10-01">2026.10.01</time><span class="cat">催し</span><span class="ttl">11月の健康相談会は「冬の乾燥と皮ふのケア」です</span></a></li>
+</ul>
+<a class="text-link" href="#">お知らせをすべて見る<svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+</div>
+</section>
+
+<!-- 店舗案内 -->
+<section class="section store" id="store">
+<div class="wrap">
+<div class="section-head">
+<h2><svg width="18" height="22" aria-hidden="true"><use href="#petal"/></svg>場所と受付時間</h2>
+<p class="store-status" data-status-row hidden><span class="status" data-status></span></p>
+</div>
+<div class="store-grid">
+<div class="store-info">
+<div class="table-scroll">
+<table class="hours">
+<caption class="visually-hidden">曜日ごとの受付時間</caption>
+<thead>
+<tr><th scope="col">受付時間</th><th scope="col" data-day="1">月</th><th scope="col" data-day="2">火</th><th scope="col" data-day="3">水</th><th scope="col" data-day="4">木</th><th scope="col" data-day="5">金</th><th scope="col" data-day="6">土</th><th scope="col" data-day="0">日祝</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">9:00 – 13:00</th><td data-day="1"><i class="o">受付</i></td><td data-day="2"><i class="o">受付</i></td><td data-day="3"><i class="o">受付</i></td><td data-day="4"><i class="o">受付</i></td><td data-day="5"><i class="o">受付</i></td><td data-day="6"><i class="o">受付</i></td><td data-day="0"><i class="x">休み</i></td></tr>
+<tr><th scope="row">13:00 – 18:30</th><td data-day="1"><i class="o">受付</i></td><td data-day="2"><i class="o">受付</i></td><td data-day="3"><i class="o">受付</i></td><td data-day="4"><i class="o">受付</i></td><td data-day="5"><i class="o">受付</i></td><td data-day="6"><i class="x">休み</i></td><td data-day="0"><i class="x">休み</i></td></tr>
+</tbody>
+</table>
+</div>
+<p class="hours-note">お昼の時間帯も休まず受け付けています。日曜・祝日、12/30〜1/3はお休みです。</p>
+<dl class="store-dl">
+<div><dt>住所</dt><dd>〒000-0000 東京都○○区さくら町1-2-3 さくらビル1F</dd></div>
+<div><dt>電車</dt><dd>○○線「○○駅」北口から徒歩3分。さくら通り商店街を進んで左手です。</dd></div>
+<div><dt>お車</dt><dd>店舗前に駐車場3台（うち1台は車いす対応）</dd></div>
+<div><dt>電話</dt><dd><a class="num" href="tel:0300000000">03-0000-0000</a>　<span class="num">FAX 03-0000-0001</span></dd></div>
+<div><dt>設備</dt><dd>段差のない入口／キッズスペース／車いすのまま入れる相談室</dd></div>
+</dl>
+<a class="btn btn-ghost" href="#"><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg>Googleマップで開く</a>
+</div>
+
+<svg class="map" viewBox="0 0 520 400" role="img" aria-label="○○駅北口からさくら薬局までの案内図。商店街を進んで左手。">
+<rect width="520" height="400" rx="20" fill="#EAF1EC"/>
+<!-- 街区 -->
+<g fill="#DCE8E0">
+<rect x="24" y="96" width="150" height="96" rx="8"/><rect x="24" y="218" width="150" height="158" rx="8"/>
+<rect x="234" y="96" width="120" height="96" rx="8"/><rect x="234" y="218" width="120" height="70" rx="8"/><rect x="234" y="314" width="120" height="62" rx="8"/>
+<rect x="386" y="96" width="110" height="192" rx="8"/><rect x="386" y="314" width="110" height="62" rx="8"/>
+</g>
+<!-- 公園 -->
+<rect x="386" y="96" width="110" height="192" rx="8" fill="#C9E2CF"/>
+<g fill="#F6B9C5"><circle cx="418" cy="140" r="14"/><circle cx="462" cy="176" r="16"/><circle cx="424" cy="228" r="13"/><circle cx="466" cy="252" r="11"/></g>
+<text x="441" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#2F6B50">さくら公園</text>
+<!-- 線路と駅 -->
+<path d="M0 44h520" stroke="#9FB3A8" stroke-width="12"/>
+<path d="M0 44h520" stroke="#fff" stroke-width="4" stroke-dasharray="14 12"/>
+<rect x="150" y="20" width="130" height="48" rx="10" fill="#0F4534"/>
+<text x="215" y="50" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" letter-spacing="1">○○駅 北口</text>
+<!-- 目印 -->
+<rect x="42" y="114" width="96" height="34" rx="6" fill="#fff"/><text x="90" y="136" text-anchor="middle" font-size="12.500" font-weight="700" fill="#4C5F56">○○銀行</text>
+<rect x="250" y="114" width="88" height="34" rx="6" fill="#fff"/><text x="294" y="136" text-anchor="middle" font-size="12.500" font-weight="700" fill="#4C5F56">コンビニ</text>
+<rect x="250" y="328" width="88" height="34" rx="6" fill="#fff"/><text x="294" y="350" text-anchor="middle" font-size="12.500" font-weight="700" fill="#4C5F56">○○内科</text>
+<text x="204" y="330" text-anchor="middle" font-size="12" font-weight="700" fill="#7D9186" transform="rotate(90 204 330)" letter-spacing="2">さくら通り商店街</text>
+<!-- 道順 -->
+<path d="M204 72v168" fill="none" stroke="#E9879B" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11"/>
+<!-- 薬局 -->
+<rect x="40" y="226" width="118" height="54" rx="8" fill="#1F6B4F"/>
+<text x="99" y="259" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" letter-spacing="1">さくら薬局</text>
+<g transform="translate(176 206)">
+<path d="M14 40S0 26 0 14a14 14 0 0 1 28 0c0 12-14 26-14 26z" fill="#D2556F"/>
+<circle cx="14" cy="14" r="5.500" fill="#fff"/>
+</g>
+<rect x="222" y="232" width="92" height="30" rx="15" fill="#fff"/>
+<text x="268" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#B8405C">徒歩3分</text>
+<g font-size="11" font-weight="700" fill="#4C5F56"><rect x="52" y="292" width="52" height="24" rx="5" fill="#fff"/><text x="78" y="308" text-anchor="middle">P 3台</text></g>
+</svg>
+</div>
+</div>
+</section>
+
+<!-- 採用 -->
+<section class="recruit" id="recruit">
+<div class="wrap recruit-inner">
+<div>
+<h2>患者さんの名前を覚えられる規模で、働きませんか。</h2>
+<p>薬剤師（正社員・パート）と調剤事務を募集しています。見学だけでも歓迎です。</p>
+</div>
+<a class="btn btn-primary btn-lg" href="#">募集要項を見る<svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+<div class="wrap footer-grid">
+<div class="footer-brand">
+<p class="logo logo-invert"><svg width="38" height="38" aria-hidden="true"><use href="#mark"/></svg><span class="logo-text">さくら薬局</span></p>
+<p>〒000-0000 東京都○○区さくら町1-2-3 さくらビル1F<br>TEL 03-0000-0000 ／ FAX 03-0000-0001<br>平日 9:00–18:30　土曜 9:00–13:00　日祝休み</p>
+</div>
+<nav aria-label="フッターメニュー">
+<h3>ご利用案内</h3>
+<a href="#flow">処方箋の送り方</a>
+<a href="#service">できること</a>
+<a href="#staff">薬剤師紹介</a>
+<a href="#faq">よくあるご質問</a>
+<a href="#store">店舗案内</a>
+<a href="#recruit">採用情報</a>
+</nav>
+<nav aria-label="薬局に関する情報">
+<h3>薬局に関する情報</h3>
+<a href="#">薬局からのお知らせ（掲示事項）</a>
+<a href="#">調剤報酬・加算のご案内</a>
+<a href="#">個人情報の取り扱い</a>
+<a href="#">開設者・許可に関する情報</a>
+</nav>
+</div>
+<div class="wrap footer-bottom"><small>© 2026 さくら薬局（デザインサンプル）</small></div>
+</footer>
+
+<!-- スマートフォン用の固定メニュー -->
+<nav class="sp-bar" aria-label="クイックメニュー">
+<a href="tel:0300000000"><svg width="22" height="22" aria-hidden="true"><use href="#i-tel"/></svg>電話する</a>
+<a class="main" href="#flow"><svg width="22" height="22" aria-hidden="true"><use href="#i-send"/></svg>処方箋を送る</a>
+<a href="#store"><svg width="22" height="22" aria-hidden="true"><use href="#i-pin"/></svg>場所・時間</a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>
